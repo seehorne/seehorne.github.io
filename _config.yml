@@ -73,4 +73,4 @@ plugins:
   - jekyll-remote-theme
 
 #theme: jekyll-theme-cayman
-remote_theme: samarsault/plainwhite-jekyll
+remote_theme: nicoelayda/celeste
