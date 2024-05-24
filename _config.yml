@@ -72,5 +72,5 @@ exclude:
 
 
 #theme: jekyll-theme-cayman
-#remote_theme: samarsault/plainwhite-jekyll
-remote_theme: no-style-please
+remote_theme: samarsault/plainwhite-jekyll
+#remote_theme: no-style-please
