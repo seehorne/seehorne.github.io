@@ -74,4 +74,4 @@ plugins:
 
 #theme: jekyll-theme-cayman
 #remote_theme: samarsault/plainwhite-jekyll
-remote_theme: plainwhite-jekyll
+remote_theme: no-style-please
