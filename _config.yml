@@ -69,5 +69,4 @@ exclude:
   - README.md
   - CNAME
 
-#theme: jekyll-theme-cayman
-remote_theme: samarsault/plainwhite-jekyll
+theme: jekyll-theme-cayman
