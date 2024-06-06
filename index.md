@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Summer 2020 DREU Project Site
+title: Aspiring Researcher in Accessibility Human Computer Interaction
 ---
 
 * TOC
