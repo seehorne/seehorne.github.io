@@ -2,7 +2,7 @@
 layout: default
 title: Summer 2024 DREU Project at University of Michigan
 ---
-
+# Summer 2024 DREU Project at University of Michigan
 * TOC
 {:toc}
 
