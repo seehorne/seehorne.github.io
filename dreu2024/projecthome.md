@@ -30,4 +30,4 @@ This section will evolve as the summer and project progresses, so check back for
 
 ## My Blog
 
-[My Blog](seehorne.github.io/blog.html)
+[My Blog](./blog.html)
