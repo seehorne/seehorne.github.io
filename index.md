@@ -16,3 +16,4 @@ I will be applying to PhD programs in Computer Science and HCI with an intended 
 [My DREU at University of Michigan Ann Arbor](/dreu2024/projecthome.md)
 
 ## Blog
+[My Blog](blog.html)
