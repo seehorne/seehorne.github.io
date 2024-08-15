@@ -24,9 +24,7 @@ My PhD student mentor is [Jaylin Herskovitz](https://jayl.in/): a 5th year PhD s
 
 My project this summer aims to support BLV users in augmenting, verifying, and debugging  mobile AI assistive technologies. We plan to build an iOS application to support use of tools like BeMyAI and SeeingAI by augmenting functionalities for best capturing user-intents—offering feedback to improve camera aim and prompt design support for visual question answering—as well as improving the capacity to verify AI responses to visual queries without sighted context—incorporating user-friendly explanations of what a model drew on to arrive at the answer it provided and facilitating automated cross-checking of visual question answers between different applications and models. We intend to not only develop this app as a standalone tool, but utilize the iOS Shortcuts interface to enable the above-mentioned features with limited disruption to the familiar use of the AI assistive technologies and improve scalability to seamlessly support new tools a user may find that were not available at the time of our app's initial development.
 
-This section will evolve as the summer and project progresses, so check back for updates!
-
-[My Final Report (Check back at the end of the summer for this!)](/files/DREU_Final_Report.pdf)
+[My Final Report](/files/DREU_Final_Report.pdf)
 
 ## My Blog
 
