@@ -26,7 +26,7 @@ My project this summer aims to support BLV users in augmenting, verifying, and d
 
 This section will evolve as the summer and project progresses, so check back for updates!
 
-[My Final Report (Check back at the end of the summer for this!)](/files/README.md)
+[My Final Report (Check back at the end of the summer for this!)](/files/DREU_Final_Report.pdf)
 
 ## My Blog
 
