@@ -42,7 +42,7 @@ body {
 
 .social-links a {
     text-decoration: none;
-    color: #00274C;
+    color: rgb(1, 50, 32);
     margin-right: 0;
     font-size: 14px
 }
@@ -75,7 +75,7 @@ h2 {
 .pub-title {
     font-size: 16px;
     font-weight: 600;
-    color: #00274C;
+    color: rgb(1, 50, 32);
     text-decoration: none
 }
 
@@ -133,7 +133,7 @@ h2 {
 
 
 .navbar a {
-    color: #00274C;
+    color: rgb(1, 50, 32);
     font-weight: 500;
     text-decoration: none;
     position: relative;
@@ -148,7 +148,7 @@ h2 {
     left: 0;
     height: 2px;
     width: 0;
-    background-color: #00274C;
+    background-color: rgb(1, 50, 32);
     transition: width 0.2s ease;
 }
 
@@ -244,25 +244,25 @@ header.site-header {
     scroll-margin-top: 80px;
 }
 
-.blue {
-    color: #00274C;
+.green {
+    color: rgb(1, 50, 32);
     font-weight: bold;
 }
 
 h1 {
-    color: #00274C;
+    color: rgb(1, 50, 32);
 }
 
 h2 {
-    color: #00274C;
+    color: rgb(1, 50, 32);
 }
 
 h3 {
-    color: #00274C;
+    color: rgb(1, 50, 32);
 }
 
 strong {
-    color: #00274C;
+    color: rgb(1, 50, 32);
 }
 
 .link-separator {
