@@ -84,6 +84,10 @@ h2 {
     text-decoration: none
 }
 
+a.pub-title{
+    text-decoration: underline
+}
+
 a.pub-title:hover {
     color: rgb(74, 103, 65);
     text-decoration: wavy underline
