@@ -65,7 +65,29 @@ h2 {
     margin-bottom: 10px
 }
 
+#news {
+    margin-top: 40px;
+}
 
+.news-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.news-date {
+    width: 100px;
+    font-weight: bold;
+    color: rgb(55, 79, 47);
+    flex-shrink: 0;
+}
+
+.news-text {
+    flex: 1;
+}
 
 #publications {
     margin-top: 40px
