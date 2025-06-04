@@ -23,15 +23,6 @@ body {
     gap: 20px
 }
 
-a {
-    color: rgb(55, 79, 47);
-    text-decoration: underline
-}
-
-a:hover {
-    color: rgb(74, 103, 65); /* a slightly lighter green for hover */
-    text-decoration: wavy underline;
-}
 
 .profile-pic {
     width: 130px;
@@ -141,7 +132,15 @@ h2 {
     -webkit-overflow-scrolling: touch;
 }
 
+a {
+    color: rgb(55, 79, 47);
+    text-decoration: underline
+}
 
+a:hover {
+    color: rgb(74, 103, 65); /* a slightly lighter green for hover */
+    text-decoration: wavy underline;
+}
 
 .navbar a {
     color: rgb(55, 79, 47);
