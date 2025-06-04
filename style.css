@@ -78,18 +78,22 @@ h2 {
     line-height: 1.5;
 }
 
-.news-date {
-    width: 100px;
-    font-weight: bold;
-    color: rgb(55, 79, 47);
+.news-meta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
     flex-shrink: 0;
+    min-width: 120px;
 }
 
 .news-type i {
-    width: 100px;
+    color: rgb(74, 103, 65);
+    font-size: 14px;
+}
+
+.news-date {
     font-weight: bold;
-    color: rgb(74,103,65);
-    flex-shrink: 0;
+    color: rgb(55, 79, 47);
 }
 
 .news-text {
