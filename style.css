@@ -5,6 +5,10 @@ body {
     color: #2b322b
 }
 
+p {
+    color: #2b322b
+}
+
 .wrapper {
     max-width: 900px;
     margin: auto;
