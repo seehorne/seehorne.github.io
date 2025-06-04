@@ -42,7 +42,7 @@ body {
 
 .social-links a {
     text-decoration: none;
-    color: rgb(48, 69, 41);
+    color: rgb(55, 79, 47);
     margin-right: 0;
     font-size: 14px
 }
@@ -75,7 +75,7 @@ h2 {
 .pub-title {
     font-size: 16px;
     font-weight: 600;
-    color: rgb(48, 69, 41);
+    color: rgb(55, 79, 47);
     text-decoration: none
 }
 
@@ -133,7 +133,7 @@ h2 {
 
 
 .navbar a {
-    color: rgb(48, 69, 41);
+    color: rgb(55, 79, 47);
     font-weight: 500;
     text-decoration: none;
     position: relative;
@@ -148,7 +148,7 @@ h2 {
     left: 0;
     height: 2px;
     width: 0;
-    background-color: rgb(48, 69, 41);
+    background-color: rgb(55, 79, 47);
     transition: width 0.2s ease;
 }
 
@@ -159,7 +159,7 @@ h2 {
 
 .navbar a:hover,
 .navbar a.active {
-    color: #002f66;
+    color: rgb(74,103,65);
 }
 
 
@@ -245,24 +245,24 @@ header.site-header {
 }
 
 .green {
-    color: rgb(48, 69, 41);
+    color: rgb(55, 79, 47);
     font-weight: bold;
 }
 
 h1 {
-    color: rgb(48, 69, 41);
+    color: rgb(55, 79, 47);
 }
 
 h2 {
-    color: rgb(48, 69, 41);
+    color: rgb(55, 79, 47);
 }
 
 h3 {
-    color: rgb(48, 69, 41);
+    color: rgb(55, 79, 47);
 }
 
 strong {
-    color: rgb(48, 69, 41);
+    color: rgb(55, 79, 47);
 }
 
 .link-separator {
