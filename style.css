@@ -9,6 +9,10 @@ p {
     color: #2b322b;
 }
 
+.small-text {
+    font-size: 0.75em;  
+}
+
 .wrapper {
     max-width: 900px;
     margin: auto;
