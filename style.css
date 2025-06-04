@@ -80,6 +80,7 @@ h2 {
 }
 
 .pub-title:hover {
+    color: rgb(74, 103, 65);
     text-decoration: underline
 }
 
