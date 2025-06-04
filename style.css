@@ -174,7 +174,6 @@ a:hover {
 .navbar a:hover,
 .navbar a.active {
     color: rgb(74,103,65);
-    text-decoration: underline;
 }
 
 
