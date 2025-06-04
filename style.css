@@ -2,11 +2,11 @@ body {
     margin: 0;
     font-family: Inter, sans-serif;
     background-color: #fdfdfd;
-    color: #2b322b
+    color: #2b322b;
 }
 
 p {
-    color: #2b322b
+    color: #2b322b;
 }
 
 .wrapper {
@@ -243,6 +243,14 @@ body {
     /* margin-top: 60px;
     padding-top: 30px;
     border-top: 1px solid #ddd */
+}
+
+.site-footer a {
+    color: #666;
+}
+
+.site-footer a:hover {
+    text-decoration: wavy underline; 
 }
 
 
