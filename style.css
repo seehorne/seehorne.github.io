@@ -42,7 +42,7 @@ body {
 
 .social-links a {
     text-decoration: none;
-    color: rgb(1, 50, 32);
+    color: rgb(48, 69, 41);
     margin-right: 0;
     font-size: 14px
 }
@@ -75,7 +75,7 @@ h2 {
 .pub-title {
     font-size: 16px;
     font-weight: 600;
-    color: rgb(1, 50, 32);
+    color: rgb(48, 69, 41);
     text-decoration: none
 }
 
@@ -133,7 +133,7 @@ h2 {
 
 
 .navbar a {
-    color: rgb(1, 50, 32);
+    color: rgb(48, 69, 41);
     font-weight: 500;
     text-decoration: none;
     position: relative;
@@ -148,7 +148,7 @@ h2 {
     left: 0;
     height: 2px;
     width: 0;
-    background-color: rgb(1, 50, 32);
+    background-color: rgb(48, 69, 41);
     transition: width 0.2s ease;
 }
 
@@ -245,24 +245,24 @@ header.site-header {
 }
 
 .green {
-    color: rgb(1, 50, 32);
+    color: rgb(48, 69, 41);
     font-weight: bold;
 }
 
 h1 {
-    color: rgb(1, 50, 32);
+    color: rgb(48, 69, 41);
 }
 
 h2 {
-    color: rgb(1, 50, 32);
+    color: rgb(48, 69, 41);
 }
 
 h3 {
-    color: rgb(1, 50, 32);
+    color: rgb(48, 69, 41);
 }
 
 strong {
-    color: rgb(1, 50, 32);
+    color: rgb(48, 69, 41);
 }
 
 .link-separator {
