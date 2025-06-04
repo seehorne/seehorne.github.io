@@ -208,11 +208,6 @@ body {
     font-size: clamp(14px, 2.5vw, 16px)
 }
 
-.pub-title:hover {
-    color: #045bb2;
-    text-decoration: underline
-}
-
 @media (max-width:600px) {
     .wrapper {
         padding: 20px 15px
@@ -247,9 +242,7 @@ body {
     border-top: 1px solid #ddd */
 }
 
-a {
-    color: #666;
-}
+
 
 header.site-header {
     scroll-margin-top: 80px;
