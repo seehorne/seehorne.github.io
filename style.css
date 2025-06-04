@@ -85,7 +85,7 @@ h2 {
     flex-shrink: 0;
 }
 
-.news-type {
+.news-type i {
     width: 100px;
     font-weight: bold;
     color: rgb(74,103,65);
