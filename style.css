@@ -23,6 +23,16 @@ body {
     gap: 20px
 }
 
+a {
+    color: rgb(55, 79, 47);
+    text-decoration: underline
+}
+
+a:hover {
+    color: rgb(74, 103, 65); /* a slightly lighter green for hover */
+    text-decoration: wavy underline;
+}
+
 .profile-pic {
     width: 130px;
     height: 130px;
