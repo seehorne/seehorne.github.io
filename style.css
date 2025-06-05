@@ -104,6 +104,28 @@ h2 {
     flex: 1;
 }
 
+.news-item.hidden {
+    display: none;
+}
+
+#toggle-news {
+    margin-top: 20px;
+    background-color: #eee;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-family: Inter, sans-serif;
+    border-radius: 4px;
+    cursor: pointer;
+    color: rgb(55, 79, 47);
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+#toggle-news:hover {
+    background-color: #ddd;
+}
+
 #publications {
     margin-top: 40px
 }
