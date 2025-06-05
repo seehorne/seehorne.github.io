@@ -173,6 +173,7 @@ a.pub-title:hover {
     border: none;
     padding: 5px 10px;
     margin-left: 5px;
+    color: rgb(55, 79, 47);
     font-family: Inter, sans-serif;
     cursor: pointer;
     border-radius: 4px;
