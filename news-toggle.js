@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     toggleBtn.addEventListener("click", function () {
       expanded = !expanded;
       newsItems.forEach((item, index) => {
-        if (index >= 10) {
+        if (index >= 5) {
           item.classList.toggle("hidden", !expanded);
         }
       });
