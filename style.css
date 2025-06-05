@@ -73,6 +73,11 @@ h2 {
     margin-top: 40px;
 }
 
+.hidden {
+    display: none !important;
+  }
+
+
 .news-item {
     display: flex;
     flex-wrap: wrap;
