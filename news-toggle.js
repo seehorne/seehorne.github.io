@@ -18,13 +18,22 @@ document.addEventListener("DOMContentLoaded", function () {
     let expanded = false;
   
     toggleBtn.addEventListener("click", function () {
+      const wasExpanded = expanded;
       expanded = !expanded;
+      toggleBtn.setAttribute("aria-expanded", expanded);
+      
       newsItems.forEach((item, index) => {
         if (index >= 5) {
           item.classList.toggle("hidden", !expanded);
         }
       });
       toggleBtn.textContent = expanded ? "Show recent news" : "Show all news";
+      // Scroll to button if collapsing
+      if (!expanded && wasExpanded) {
+        setTimeout(() => {
+          toggleBtn.scrollIntoView({ behavior: "smooth", block: "center" });
+        }, 150); // Delay ensures layout has updated before scroll
+      }
     });
   });
   
