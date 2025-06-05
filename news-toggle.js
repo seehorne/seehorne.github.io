@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
           item.classList.toggle("hidden", !expanded);
         }
       });
-      toggleBtn.textContent = expanded ? "Show all news" : "Show recent news";
+      toggleBtn.textContent = expanded ? "Show recent news" : "Show all news";
     });
   });
   
