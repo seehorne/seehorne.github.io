@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
   
     // Hide items beyond the 5th
     newsItems.forEach((item, index) => {
-      if (index >= 5) {
+      if (index >= 7) {
         item.classList.add("hidden");
       }
     });
