@@ -164,7 +164,8 @@ a.pub-title:hover {
 }
 
 .bib-toggle,
-.bib-copy {
+.bib-copy,
+.pub-resource-link {
     margin-top: 10px;
     padding: 5px 10px;
     border: 1px solid #cfd6cc;
@@ -175,17 +176,25 @@ a.pub-title:hover {
     font-size: 13px;
     font-weight: 600;
     cursor: pointer;
+    text-decoration: none;
 }
 
 .bib-toggle:hover,
-.bib-copy:hover {
+.bib-copy:hover,
+.pub-resource-link:hover {
     background: #e5eae3;
 }
 
 .bib-toggle:focus-visible,
-.bib-copy:focus-visible {
+.bib-copy:focus-visible,
+.pub-resource-link:focus-visible {
     outline: 3px solid rgba(55, 79, 47, 0.35);
     outline-offset: 2px;
+}
+
+.pub-resource-link {
+    display: inline-block;
+    margin-left: 6px;
 }
 
 .bib-toggle[aria-expanded="true"] {

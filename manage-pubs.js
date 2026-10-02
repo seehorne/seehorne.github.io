@@ -80,7 +80,7 @@ document.querySelectorAll("section").forEach((section) => {
     sectionObserver.observe(section);
 });
 
-const BIB_FIELDS_TO_HIDE = new Set(['bibtex_show', 'selected']);
+const BIB_FIELDS_TO_HIDE = new Set(['bibtex_show', 'selected', 'code', 'video']);
 
 function splitTopLevel(text, delimiter = ',') {
     const parts = [];
@@ -115,6 +115,8 @@ function splitTopLevel(text, delimiter = ',') {
 }
 
 function formatBibEntry(type, key, body) {
+    let codeUrl = null;
+    let videoUrl = null;
     const fields = splitTopLevel(body)
         .map(field => field.trim())
         .filter(Boolean)
@@ -124,12 +126,22 @@ function formatBibEntry(type, key, body) {
 
             const name = field.slice(0, equalsIndex).trim();
             const value = field.slice(equalsIndex + 1).trim().replace(/\s+/g, ' ');
+            if (name.toLowerCase() === 'code') {
+                codeUrl = value.replace(/^\s*[{"]|[}"]\s*$/g, '');
+            }
+            if (name.toLowerCase() === 'video') {
+                videoUrl = value.replace(/^\s*[{"]|[}"]\s*$/g, '');
+            }
             if (BIB_FIELDS_TO_HIDE.has(name.toLowerCase())) return null;
             return `  ${name.toLowerCase()} = ${value}`;
         })
         .filter(Boolean);
 
-    return `@${type}{${key},\n${fields.join(',\n')}\n}`;
+    return {
+        bibtex: `@${type}{${key},\n${fields.join(',\n')}\n}`,
+        codeUrl,
+        videoUrl
+    };
 }
 
 function parseBibliography(source) {
@@ -192,13 +204,14 @@ async function copyText(text) {
     textArea.remove();
 }
 
-function addBibPanel(card, bibtex) {
+function addBibPanel(card, entry) {
     const key = card.dataset.bibKey;
+    const { bibtex, codeUrl, videoUrl } = entry;
     const panelId = `bib-panel-${key.toLowerCase()}`;
     const button = document.createElement('button');
     button.className = 'bib-toggle';
     button.type = 'button';
-    button.textContent = 'Bib';
+    button.textContent = 'BibTeX';
     button.setAttribute('aria-expanded', 'false');
     button.setAttribute('aria-controls', panelId);
 
@@ -217,7 +230,24 @@ function addBibPanel(card, bibtex) {
     code.textContent = bibtex;
     pre.appendChild(code);
     panel.append(copyButton, pre);
-    card.append(button, panel);
+    card.append(button);
+
+    [
+        { url: codeUrl, label: 'Code' },
+        { url: videoUrl, label: 'Video' }
+    ].forEach(({ url, label }) => {
+        if (!url) return;
+
+        const resourceLink = document.createElement('a');
+        resourceLink.className = 'pub-resource-link';
+        resourceLink.href = url;
+        resourceLink.target = '_blank';
+        resourceLink.rel = 'noopener noreferrer';
+        resourceLink.textContent = label;
+        card.append(resourceLink);
+    });
+
+    card.append(panel);
 
     button.addEventListener('click', () => {
         const shouldOpen = panel.hidden;
@@ -246,9 +276,9 @@ async function initializeBibPanels() {
         const entries = parseBibliography(await response.text());
 
         document.querySelectorAll('.pub-card[data-bib-key]').forEach(card => {
-            const bibtex = entries.get(card.dataset.bibKey);
-            if (bibtex) {
-                addBibPanel(card, bibtex);
+            const entry = entries.get(card.dataset.bibKey);
+            if (entry) {
+                addBibPanel(card, entry);
             } else {
                 console.warn(`No BibTeX entry found for ${card.dataset.bibKey}.`);
             }
