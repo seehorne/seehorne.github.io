@@ -73,6 +73,32 @@ h2 {
     margin-top: 40px;
 }
 
+#toggle-earlier-research {
+    padding: 6px 10px;
+    border: 1px solid #cfd6cc;
+    border-radius: 4px;
+    background: #f4f6f3;
+    color: rgb(55, 79, 47);
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+#toggle-earlier-research:hover {
+    background: #e5eae3;
+}
+
+#toggle-earlier-research:focus-visible {
+    outline: 3px solid rgba(55, 79, 47, 0.35);
+    outline-offset: 2px;
+}
+
+#toggle-earlier-research[aria-expanded="true"] {
+    background: rgb(55, 79, 47);
+    color: #fff;
+}
+
 .hidden {
     display: none !important;
   }

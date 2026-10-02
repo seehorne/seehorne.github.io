@@ -80,6 +80,20 @@ document.querySelectorAll("section").forEach((section) => {
     sectionObserver.observe(section);
 });
 
+const earlierResearchButton = document.getElementById('toggle-earlier-research');
+const earlierResearch = document.getElementById('earlier-research');
+
+if (earlierResearchButton && earlierResearch) {
+    earlierResearchButton.addEventListener('click', () => {
+        const shouldOpen = earlierResearch.hidden;
+        earlierResearch.hidden = !shouldOpen;
+        earlierResearchButton.setAttribute('aria-expanded', String(shouldOpen));
+        earlierResearchButton.textContent = shouldOpen
+            ? 'Hide earlier research experience'
+            : 'See earlier research experience';
+    });
+}
+
 const BIB_FIELDS_TO_HIDE = new Set(['bibtex_show', 'selected', 'code', 'video', 'abstract']);
 
 function splitTopLevel(text, delimiter = ',') {
