@@ -80,7 +80,7 @@ document.querySelectorAll("section").forEach((section) => {
     sectionObserver.observe(section);
 });
 
-const BIB_FIELDS_TO_HIDE = new Set(['bibtex_show', 'selected', 'code', 'video']);
+const BIB_FIELDS_TO_HIDE = new Set(['bibtex_show', 'selected', 'code', 'video', 'abstract']);
 
 function splitTopLevel(text, delimiter = ',') {
     const parts = [];
@@ -117,6 +117,7 @@ function splitTopLevel(text, delimiter = ',') {
 function formatBibEntry(type, key, body) {
     let codeUrl = null;
     let videoUrl = null;
+    let abstract = null;
     const fields = splitTopLevel(body)
         .map(field => field.trim())
         .filter(Boolean)
@@ -132,6 +133,9 @@ function formatBibEntry(type, key, body) {
             if (name.toLowerCase() === 'video') {
                 videoUrl = value.replace(/^\s*[{"]|[}"]\s*$/g, '');
             }
+            if (name.toLowerCase() === 'abstract') {
+                abstract = value.replace(/^\s*[{"]|[}"]\s*$/g, '');
+            }
             if (BIB_FIELDS_TO_HIDE.has(name.toLowerCase())) return null;
             return `  ${name.toLowerCase()} = ${value}`;
         })
@@ -140,7 +144,8 @@ function formatBibEntry(type, key, body) {
     return {
         bibtex: `@${type}{${key},\n${fields.join(',\n')}\n}`,
         codeUrl,
-        videoUrl
+        videoUrl,
+        abstract
     };
 }
 
@@ -206,7 +211,7 @@ async function copyText(text) {
 
 function addBibPanel(card, entry) {
     const key = card.dataset.bibKey;
-    const { bibtex, codeUrl, videoUrl } = entry;
+    const { bibtex, codeUrl, videoUrl, abstract } = entry;
     const panelId = `bib-panel-${key.toLowerCase()}`;
     const button = document.createElement('button');
     button.className = 'bib-toggle';
@@ -232,6 +237,26 @@ function addBibPanel(card, entry) {
     panel.append(copyButton, pre);
     card.append(button);
 
+    let abstractButton = null;
+    let abstractPanel = null;
+
+    if (abstract) {
+        const abstractPanelId = `abstract-panel-${key.toLowerCase()}`;
+        abstractButton = document.createElement('button');
+        abstractButton.className = 'abstract-toggle';
+        abstractButton.type = 'button';
+        abstractButton.textContent = 'Abstract';
+        abstractButton.setAttribute('aria-expanded', 'false');
+        abstractButton.setAttribute('aria-controls', abstractPanelId);
+
+        abstractPanel = document.createElement('div');
+        abstractPanel.className = 'abstract-panel';
+        abstractPanel.id = abstractPanelId;
+        abstractPanel.hidden = true;
+        abstractPanel.textContent = abstract;
+        card.append(abstractButton);
+    }
+
     [
         { url: codeUrl, label: 'Code' },
         { url: videoUrl, label: 'Video' }
@@ -248,12 +273,21 @@ function addBibPanel(card, entry) {
     });
 
     card.append(panel);
+    if (abstractPanel) card.append(abstractPanel);
 
     button.addEventListener('click', () => {
         const shouldOpen = panel.hidden;
         panel.hidden = !shouldOpen;
         button.setAttribute('aria-expanded', String(shouldOpen));
     });
+
+    if (abstractButton && abstractPanel) {
+        abstractButton.addEventListener('click', () => {
+            const shouldOpen = abstractPanel.hidden;
+            abstractPanel.hidden = !shouldOpen;
+            abstractButton.setAttribute('aria-expanded', String(shouldOpen));
+        });
+    }
 
     copyButton.addEventListener('click', async () => {
         try {

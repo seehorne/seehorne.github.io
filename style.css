@@ -164,6 +164,7 @@ a.pub-title:hover {
 }
 
 .bib-toggle,
+.abstract-toggle,
 .bib-copy,
 .pub-resource-link {
     margin-top: 10px;
@@ -180,12 +181,14 @@ a.pub-title:hover {
 }
 
 .bib-toggle:hover,
+.abstract-toggle:hover,
 .bib-copy:hover,
 .pub-resource-link:hover {
     background: #e5eae3;
 }
 
 .bib-toggle:focus-visible,
+.abstract-toggle:focus-visible,
 .bib-copy:focus-visible,
 .pub-resource-link:focus-visible {
     outline: 3px solid rgba(55, 79, 47, 0.35);
@@ -197,9 +200,14 @@ a.pub-title:hover {
     margin-left: 6px;
 }
 
-.bib-toggle[aria-expanded="true"] {
+.bib-toggle[aria-expanded="true"],
+.abstract-toggle[aria-expanded="true"] {
     background: rgb(55, 79, 47);
     color: #fff;
+}
+
+.abstract-toggle {
+    margin-left: 6px;
 }
 
 .bib-panel {
@@ -212,6 +220,21 @@ a.pub-title:hover {
 }
 
 .bib-panel[hidden] {
+    display: none;
+}
+
+.abstract-panel {
+    margin-top: 8px;
+    padding: 12px;
+    border: 1px solid #d9ded7;
+    border-radius: 6px;
+    background: #f8f9f7;
+    color: #333;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.abstract-panel[hidden] {
     display: none;
 }
 
