@@ -74,29 +74,25 @@ h2 {
 }
 
 #toggle-earlier-research {
-    padding: 6px 10px;
-    border: 1px solid #cfd6cc;
+    padding: 6px 12px;
+    border: none;
     border-radius: 4px;
-    background: #f4f6f3;
+    background-color: #eee;
     color: rgb(55, 79, 47);
     font-family: Inter, sans-serif;
     font-size: 14px;
-    font-weight: 600;
+    font-weight: 500;
     cursor: pointer;
+    transition: background-color 0.2s ease;
 }
 
 #toggle-earlier-research:hover {
-    background: #e5eae3;
+    background-color: #ddd;
 }
 
 #toggle-earlier-research:focus-visible {
     outline: 3px solid rgba(55, 79, 47, 0.35);
     outline-offset: 2px;
-}
-
-#toggle-earlier-research[aria-expanded="true"] {
-    background: rgb(55, 79, 47);
-    color: #fff;
 }
 
 .hidden {

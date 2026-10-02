@@ -91,6 +91,15 @@ if (earlierResearchButton && earlierResearch) {
         earlierResearchButton.textContent = shouldOpen
             ? 'Hide earlier research experience'
             : 'See earlier research experience';
+
+        if (shouldOpen) {
+            requestAnimationFrame(() => {
+                const textPosition = earlierResearch.getBoundingClientRect();
+                if (textPosition.top < 0 || textPosition.bottom > window.innerHeight) {
+                    earlierResearch.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        }
     });
 }
 
