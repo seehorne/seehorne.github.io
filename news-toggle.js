@@ -1,16 +1,17 @@
 document.addEventListener("DOMContentLoaded", function () {
     const newsItems = document.querySelectorAll("#news-list .news-item");
     const toggleBtn = document.getElementById("toggle-news");
+    const defaultVisibleCount = 10;
   
-    // If 7 or fewer items, hide the toggle button
-    if (newsItems.length <= 7) {
+    // Hide the toggle button when every item is already visible.
+    if (newsItems.length <= defaultVisibleCount) {
       toggleBtn.style.display = "none";
       return;
     }
   
-    // Hide items beyond the 7th
+    // Hide items beyond the default visible count.
     newsItems.forEach((item, index) => {
-      if (index >= 7) {
+      if (index >= defaultVisibleCount) {
         item.classList.add("hidden");
       }
     });
@@ -23,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
       toggleBtn.setAttribute("aria-expanded", expanded);
       
       newsItems.forEach((item, index) => {
-        if (index >= 7) {
+        if (index >= defaultVisibleCount) {
           item.classList.toggle("hidden", !expanded);
         }
       });
@@ -36,4 +37,3 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-  
